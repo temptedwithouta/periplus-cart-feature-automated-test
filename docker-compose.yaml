@@ -1,5 +1,5 @@
 services:
-  app:
+  periplus-automated-test-app:
     image: mcr.microsoft.com/playwright:v1.52.0-noble
     container_name: "periplus-automated-test-app"
     tty: "true"
