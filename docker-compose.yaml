@@ -1,0 +1,13 @@
+services:
+  app:
+    image: mcr.microsoft.com/playwright:v1.52.0-noble
+    container_name: "periplus-automated-test-app"
+    tty: "true"
+    stdin_open: "true"
+    restart: "always"
+    working_dir: "/app"
+    volumes:
+      - ".:/app"
+    command: sh -c "npm install && npx playwright install && npx playwright test"
+    ports:
+      - "9323:9323"
